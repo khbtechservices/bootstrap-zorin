@@ -28,4 +28,4 @@ systemctl start ssh
 echo -e " ${INFO} VIM ${RESET} Installing VIM"
 apt install -y vim
 
-echo -e " ${ISUCCESSO} DONE! ${RESET} Done!"
+echo -e " ${SUCCESS} DONE! ${RESET} Done!"
