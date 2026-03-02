@@ -11,7 +11,7 @@ apt update &&  apt upgrade -y
 
 # Install SSH
 apt install -y openssh-server
-systemctl enabl ssh
+systemctl enable ssh
 systemctl start ssh
 
 # Install vim
