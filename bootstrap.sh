@@ -29,4 +29,8 @@ systemctl start ssh
 echo -e " ${INFO} VIM ${RESET} ${BOLD_DEFAULT}Installing VIM${RESET}"
 apt install -y vim
 
+# Install rclone
+echo -e " ${INFO} RCLONE ${RESET} ${BOLD_DEFAULT}Installing rclone${RESET}"
+curl https://rclone.org/install.sh | sudo bash
+
 echo -e " ${SUCCESS} DONE! ${RESET} ${BOLD_DEFAULT}Done!${RESET}"
