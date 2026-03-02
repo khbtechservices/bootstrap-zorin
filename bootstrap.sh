@@ -1,13 +1,18 @@
 #!/bin/bash
+if [ "$EUID" -ne 0 ]; then
+  echo "Please run with "
+  exit 1
+fi
+
 set -e
 
 # Update System
-sudo apt update && sudo apt upgrade -y
+apt update &&  apt upgrade -y
 
 # Install SSH
-sudo apt install -y openssh-server
-sudo systemctl enabl ssh
-sudo systemctl start ssh
+apt install -y openssh-server
+systemctl enabl ssh
+systemctl start ssh
 
 # Install vim
-sudo apt install -y vim
+apt install -y vim
