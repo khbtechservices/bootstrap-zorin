@@ -9,7 +9,7 @@ fi
 # --------------------------------
 INFO='\033[0;30;106m'
 SUCCESS='\033[0;30;42m'
-BOLD_DEFAULT='\033[1m;'
+BOLD_DEFAULT='\033[1m'
 RESET='\033[0m'
 
 set -e
