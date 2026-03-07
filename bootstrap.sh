@@ -15,22 +15,22 @@ RESET='\033[0m'
 set -e
 
 # Update System
-echo -e " ${INFO} UPDATE ${RESET} ${BOLD_DEFAULT}Updating & Upgrading System${RESET}"
+printf "\n${INFO} UPDATE ${RESET} ${BOLD_DEFAULT}Updating & Upgrading System${RESET}"
 apt update &&  apt upgrade -y
 
 # Install SSH
-echo -e " ${INFO} SSH ${RESET} ${BOLD_DEFAULT}Installing SSH${RESET}"
+printf "\n${INFO} SSH ${RESET} ${BOLD_DEFAULT}Installing SSH${RESET}"
 apt install -y openssh-server
-echo -e " ${INFO} SSH ${RESET} ${BOLD_DEFAULT}Enabling SSH${RESET}"
+printf "\n${INFO} SSH ${RESET} ${BOLD_DEFAULT}Enabling SSH${RESET}"
 systemctl enable ssh
 systemctl start ssh
 
 # Install vim
-echo -e " ${INFO} VIM ${RESET} ${BOLD_DEFAULT}Installing VIM${RESET}"
+printf "\n${INFO} VIM ${RESET} ${BOLD_DEFAULT}Installing VIM${RESET}"
 apt install -y vim
 
 # Install rclone
-echo -e " ${INFO} RCLONE ${RESET} ${BOLD_DEFAULT}Installing rclone${RESET}"
+printf "\n${INFO} RCLONE ${RESET} ${BOLD_DEFAULT}Installing rclone${RESET}"
 curl https://rclone.org/install.sh | sudo bash
 
-echo -e " ${SUCCESS} DONE! ${RESET} ${BOLD_DEFAULT}Done!${RESET}"
+printf "\n${SUCCESS} DONE! ${RESET} ${BOLD_DEFAULT}Done!${RESET}"
